@@ -1,0 +1,14 @@
+# .NET
+bin/
+obj/
+publish/
+*.user
+*.suo
+*.cache
+
+# Node
+node_modules/
+package-lock.json
+
+# Windows
+Thumbs.db
