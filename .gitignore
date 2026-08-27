@@ -10,5 +10,12 @@ publish/
 node_modules/
 package-lock.json
 
+# 备份
+archive/
+
+# 文档
+*.doc
+*.docx
+
 # Windows
 Thumbs.db
