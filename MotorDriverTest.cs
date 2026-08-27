@@ -228,11 +228,11 @@ namespace MotorDriverTest
                 BorderStyle = BorderStyle.Fixed3D
             };
             dgv.Columns.Add("Index", "序号");
-            dgv.Columns["Index"].Width = 60;
+            dgv.Columns["Index"].Width = 20;
             dgv.Columns.Add("Hex", "十六进制");
             dgv.Columns["Hex"].Width = 320;
             dgv.Columns.Add("Time", "时间");
-            dgv.Columns["Time"].Width = 100;
+            dgv.Columns["Time"].Width = 80;
             this.Controls.Add(dgv);
 
             // ---- 底部按钮 ----

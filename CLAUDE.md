@@ -6,6 +6,12 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 电机驱动板 Modbus RTU 串口通信测试工具，单文件 C# WinForms 应用。
 
+## 开始前确认方案
+开始实现前，用一句话重述用户的核心需求并确认方案，除非请求明确无歧义。
+
+## 全量搜索再编辑
+编辑出现在多出位置的变量或UI元素时，先搜索所有出现位置并列出，不要假设两次编辑已覆盖全部。
+
 ## 构建
 
 ```bash
@@ -33,12 +39,6 @@ Modbus RTU，38400bps, 8,N,1。寄存器地址偏移（代码中用）：
 
 ## 代码结构
 
-- `CalcCRC16()` — Modbus CRC-16，多项式 0xA001，输出**小端序**（低字节在前），与硬编码命令一致
-- `SendReadCmd(addr, reg)` — 发送 0x03 读命令，更新 `_lastReadReg` 用于响应解析
-- `ParseAndShow()` — 解析接收缓冲区，区分广播(0x00地址)、写响应(0x06/0x10)、读响应(0x03/0x04)
-- `ParseReadResponse(data)` — 根据 `_lastReadReg` 分支更新状态标签
-- `SendRaw()` / `SendCustom()` — 发送命令，清缓冲区，显示 TX 记录
-- 3 秒 Timer 轮询报警(0x0006)和转速(0x0007)
 
 ## 注意事项
 
